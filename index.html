@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Music Popularity Analysis</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 20px 10;
+      
+      
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #575757;
+    }
+
+    section {
+      padding: 50px 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    
+    img {
+      width: 100%;
+      max-width: 1000px;
+      height: 600px;
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+    }
+
+    .visualization-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 20px 0;
+      /* flex: 1 1 45%; */
+      min-width: 500px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Music Popularity Analysis</h1>
+    <!-- <p>Exploring the trends in music based on popularity of different music genres over time (High vs Low Popularity).</p> -->
+    <p>A comparative analysis of highly and less popular songs using energy, danceability, tempo, and more across genres
+      and time.</p>
+    <nav>
+      <a href="#energy">Average Energy by Genre</a>
+      <a href="#tempo-liveness">Tempo and Liveness by Genre</a>
+      <a href="#duration-valence">Duration and Valence by Genre</a>
+      <a href="#speechiness-popularity">Speechiness & Popularity by Genre</a>
+      <a href="#energy-danceability">Energy & Danceability by Genre</a>
+      <a href="#changes-over-years">Changes Over Time</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="introduction">
+      <h2>About this Project</h2>
+      <p>This project explores how key musical features like energy, danceability, speechiness, and loudness vary
+        between highly popular and less popular songs across genres and over time. Using two curated datasets from
+        Spotify's API, this project visualizes musical trends, genre characteristics, and evolution patterns to better
+        understand what drives popularity in music today.
+      </p>
+    </section>
+
+    <section id="navigation">
+      <h2>How to Explore:</h2>
+      <p>Use the navigation bar to jump between different topics. Each section compares highly popular vs less popular
+        songs. You can interact with filters for year and genre inside many charts. Hover on graphs to view detailed
+        insights!</p>
+    </section>
+
+    <!-- Section 1 -->
+    <section id="energy">
+      <h2>Average Energy by Genre</h2>
+      <p>This visualization compares the average energy levels across different genres for both high and low popularity
+        songs. Hover over the bars to see exact energy values per genre</p>
+      <div class="visualization-container">
+        <div class='tableauPlaceholder' id='viz1745733710074' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 1 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part1_1&#47;Dashboard1&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='viz_1_part1_1&#47;Dashboard1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part1_1&#47;Dashboard1&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745733710074'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <!--  -->
+        <div class='tableauPlaceholder' id='viz1745734126169' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 1 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz2-part1&#47;Dashboard1&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='viz2-part1&#47;Dashboard1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz2-part1&#47;Dashboard1&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745734126169'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </section>
+
+
+    <!-- Section 2 -->
+    <section id="tempo-liveness">
+      <h2>Tempo and Liveness by Genre</h2>
+      <p>This dual-axis line graph shows how tempo and liveness vary across genres.
+        Hover over the lines to see detailed data points!</p>
+      <div class="visualization-container">
+        <div class='tableauPlaceholder' id='viz1745732929218' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 2 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part2&#47;Dashboard2&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='viz_1_part2&#47;Dashboard2' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part2&#47;Dashboard2&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745732929218'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <!--  -->
+        <div class='tableauPlaceholder' id='viz1745734277310' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 2 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz2-part2&#47;Dashboard2&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='viz2-part2&#47;Dashboard2' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz2-part2&#47;Dashboard2&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745734277310'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="duration-valence">
+      <h2>Duration and Valence by Genre</h2>
+      <p>This dual-axis line graph shows average song duration and valence across genres.
+        Hover over the lines to see detailed data points!</p>
+      <div class="visualization-container">
+        <div class='tableauPlaceholder' id='viz1745733095655' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 3 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part3&#47;Dashboard3&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='viz_1_part3&#47;Dashboard3' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part3&#47;Dashboard3&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745733095655'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <!-- -->
+        <div class='tableauPlaceholder' id='viz1745734368384' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 3 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz2-part3&#47;Dashboard3&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='viz2-part3&#47;Dashboard3' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz2-part3&#47;Dashboard3&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745734368384'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </section>
+
+
+    <!-- Section 4 -->
+    <section id="speechiness-popularity">
+      <h2>Speechiness and Popularity by Genre</h2>
+
+      <p>Discover how speechiness and popularity levels vary across different genres using the dual-axis area chart.
+        Hover over the lines to see detailed data points!
+      </p>
+      <div class="visualization-container">
+        <div class='tableauPlaceholder' id='viz1745733169384' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 4 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part4&#47;Dashboard4&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='viz_1_part4&#47;Dashboard4' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part4&#47;Dashboard4&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745733169384'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <!-- -->
+        <div class='tableauPlaceholder' id='viz1745734478763' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 4 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz2-part4&#47;Dashboard4&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='viz2-part4&#47;Dashboard4' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz2-part4&#47;Dashboard4&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745734478763'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="energy-danceability">
+      <h2>Which genres are more Energetic of Danceable?</h2>
+      <p>Explore the treemap to find out which genres have the highest average energy and danceability. Use the
+        interactive legend to highlight specific genres over various time periods.</p>
+      <div class="visualization-container">
+        <div class='tableauPlaceholder' id='viz1745733484606' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 5 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part5_1&#47;Dashboard5&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='viz_1_part5_1&#47;Dashboard5' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part5_1&#47;Dashboard5&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745733484606'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <!--  -->
+        <div class='tableauPlaceholder' id='viz1745734938815' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 5 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HX&#47;HXWRHYCB5&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='path' value='shared&#47;HXWRHYCB5' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HX&#47;HXWRHYCB5&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745734938815'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </section>
+
+    <!-- Section 6 -->
+    <section id="changes-over-years">
+      <h2>Changes Over the Years</h2>
+      <p>This visualization shows how energy, danceability, loudness, and speechiness have changed over time for both
+        high and low popularity songs.
+        Use the filters to select specific time periods or genres!</p>
+      <div class="visualization-container">
+        <div class='tableauPlaceholder' id='viz1745733556654' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 6 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part6&#47;Dashboard6&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='viz_1_part6&#47;Dashboard6' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_1_part6&#47;Dashboard6&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745733556654'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <!--  -->
+        <div class='tableauPlaceholder' id='viz1745735037176' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 6 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz2-part6&#47;Dashboard6&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='viz2-part6&#47;Dashboard6' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz2-part6&#47;Dashboard6&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1745735037176'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    </section>
+
+  </div>
+  <footer>
+    <p> © 2025 | Created by Aashish Jayapuram - University of South Carolina </p>
+  </footer>
+</body>
+
+</html>
